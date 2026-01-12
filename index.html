@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo Test Web</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Lista de tareas</h1>
+        <p>Agrega, completa y elimina tareas con persistencia local.</p>
+      </header>
+
+      <section class="app__composer" aria-label="Agregar tarea">
+        <label class="field field--wide">
+          <span class="field__label">Nueva tarea</span>
+          <input
+            id="task-input"
+            type="text"
+            placeholder="Ejemplo: Comprar pan"
+            autocomplete="off"
+          />
+        </label>
+        <label class="field">
+          <span class="field__label">Inicio</span>
+          <input id="start-date" type="date" />
+        </label>
+        <label class="field">
+          <span class="field__label">Fin</span>
+          <input id="end-date" type="date" />
+        </label>
+        <label class="field">
+          <span class="field__label">Recordatorio</span>
+          <input id="reminder-date" type="datetime-local" />
+        </label>
+        <button id="add-task" type="button">Agregar</button>
+      </section>
+
+      <section class="app__list" aria-live="polite">
+        <h2>Tareas</h2>
+        <ul id="task-list" class="task-list"></ul>
+        <p id="empty-state" class="empty-state">Aún no tienes tareas.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
