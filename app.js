@@ -57,14 +57,16 @@ const formatDateTime = (value) => {
 const renderTasks = () => {
   taskList.innerHTML = "";
 
-  if (tasks.length === 0) {
+  const pendingTasks = tasks.filter((task) => !task.completed);
+
+  if (pendingTasks.length === 0) {
     emptyState.hidden = false;
     return;
   }
 
   emptyState.hidden = true;
 
-  tasks.forEach((task) => {
+  pendingTasks.forEach((task) => {
     const listItem = document.createElement("li");
     listItem.className = `task${task.completed ? " task--completed" : ""}${
       editingId === task.id ? " task--editing" : ""

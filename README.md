@@ -31,9 +31,10 @@ http://localhost:8000
 2. Completa opcionalmente las fechas de inicio, fin y el recordatorio antes de agregar.
 3. Verifica que la tarea y sus fechas aparezcan en la lista.
 4. Marca la tarea como completada con el checkbox (debe cambiar el estilo).
-5. Presiona **Editar** para modificar el texto o las fechas y guarda los cambios.
-6. Presiona **Eliminar** para quitar una tarea.
-7. Recarga la página y confirma que las tareas persisten.
+5. Al completarla, la tarea desaparece de la lista de pendientes.
+6. Presiona **Editar** para modificar el texto o las fechas y guarda los cambios.
+7. Presiona **Eliminar** para quitar una tarea.
+8. Recarga la página y confirma que las tareas persisten.
 
 ## Uso de fechas y recordatorios
 
