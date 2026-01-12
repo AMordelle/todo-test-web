@@ -66,7 +66,9 @@ const renderTasks = () => {
 
   tasks.forEach((task) => {
     const listItem = document.createElement("li");
-    listItem.className = `task${task.completed ? " task--completed" : ""}`;
+    listItem.className = `task${task.completed ? " task--completed" : ""}${
+      editingId === task.id ? " task--editing" : ""
+    }`;
 
     const toggle = document.createElement("input");
     toggle.type = "checkbox";
