@@ -28,7 +28,14 @@ http://localhost:8000
 ## Cómo probar las funciones principales
 
 1. Escribe una tarea en el input y presiona **Agregar** o **Enter**.
-2. Verifica que la tarea aparezca en la lista.
-3. Marca la tarea como completada con el checkbox (debe cambiar el estilo).
-4. Presiona **Eliminar** para quitar una tarea.
-5. Recarga la página y confirma que las tareas persisten.
+2. Completa opcionalmente las fechas de inicio, fin y el recordatorio antes de agregar.
+3. Verifica que la tarea y sus fechas aparezcan en la lista.
+4. Marca la tarea como completada con el checkbox (debe cambiar el estilo).
+5. Presiona **Editar** para modificar el texto o las fechas y guarda los cambios.
+6. Presiona **Eliminar** para quitar una tarea.
+7. Recarga la página y confirma que las tareas persisten.
+
+## Uso de fechas y recordatorios
+
+- **Inicio** y **Fin** usan un selector de fecha simple.
+- **Recordatorio** permite elegir fecha y hora, pero en esta versión solo se guarda y se muestra en pantalla (no dispara alarmas).

@@ -14,7 +14,7 @@
       </header>
 
       <section class="app__composer" aria-label="Agregar tarea">
-        <label class="field">
+        <label class="field field--wide">
           <span class="field__label">Nueva tarea</span>
           <input
             id="task-input"
@@ -22,6 +22,18 @@
             placeholder="Ejemplo: Comprar pan"
             autocomplete="off"
           />
+        </label>
+        <label class="field">
+          <span class="field__label">Inicio</span>
+          <input id="start-date" type="date" />
+        </label>
+        <label class="field">
+          <span class="field__label">Fin</span>
+          <input id="end-date" type="date" />
+        </label>
+        <label class="field">
+          <span class="field__label">Recordatorio</span>
+          <input id="reminder-date" type="datetime-local" />
         </label>
         <button id="add-task" type="button">Agregar</button>
       </section>

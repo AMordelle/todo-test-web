@@ -46,7 +46,7 @@ body {
   border-radius: 16px;
   border: 1px solid var(--border);
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 16px;
   align-items: end;
 }
@@ -57,11 +57,19 @@ body {
   gap: 8px;
 }
 
+.field--wide {
+  grid-column: span 2;
+}
+
 .field__label {
   font-weight: 600;
 }
 
-#task-input {
+#task-input,
+#start-date,
+#end-date,
+#reminder-date,
+.task__edit-input {
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -133,18 +141,52 @@ body {
   font-size: 1rem;
 }
 
+.task__edit-fields {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.task__edit-input {
+  width: 100%;
+}
+
+.task__meta {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: grid;
+  gap: 4px;
+}
+
+.task__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.task__button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.task__edit {
+  background: var(--primary-weak);
+  color: var(--primary);
+}
+
 .task--completed .task__text {
   text-decoration: line-through;
   color: var(--muted);
 }
 
 .task__delete {
-  border: none;
   background: var(--primary-weak);
   color: var(--danger);
-  padding: 8px 12px;
-  border-radius: 10px;
-  cursor: pointer;
 }
 
 .task__delete:hover {
@@ -159,6 +201,10 @@ body {
 @media (max-width: 600px) {
   .app__composer {
     grid-template-columns: 1fr;
+  }
+
+  .field--wide {
+    grid-column: span 1;
   }
 
   #add-task {
